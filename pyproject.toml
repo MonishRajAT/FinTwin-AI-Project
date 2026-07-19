@@ -1,0 +1,26 @@
+[project]
+name = "fintwin-ai-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "altair==5.5.0",
+    "bcrypt==4.3.0",
+    "chromadb==1.0.16",
+    "groq==0.31.0",
+    "joblib==1.5.1",
+    "langchain==0.3.27",
+    "langchain-community==0.3.27",
+    "langchain-text-splitters==0.3.9",
+    "numpy==2.3.2",
+    "pandas==2.3.1",
+    "plotly==6.2.0",
+    "psycopg2-binary==2.9.10",
+    "pypdf==5.8.0",
+    "python-dotenv==1.1.1",
+    "requests==2.32.4",
+    "scikit-learn==1.7.1",
+    "sentence-transformers==5.0.0",
+    "streamlit==1.49.0",
+]
