@@ -162,12 +162,12 @@ FinTwin-AI-Project/
 * Financial Health Engine
 * Dashboard
 
-## 🚧 Phase 4
+## ✅ Phase 4
 
 * Transaction Management
 * Spending Analytics
 
-## ⏳ Phase 5
+## 🚧 Phase 5
 
 * Machine Learning Models
 
