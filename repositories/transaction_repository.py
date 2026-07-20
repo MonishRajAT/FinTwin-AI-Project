@@ -71,7 +71,7 @@ def get_transaction(transaction_id: int):
 
     return fetch_one(
         query,
-        (transaction_id),
+        (transaction_id,),
     )
 
 def get_transactions(user_id: int):
