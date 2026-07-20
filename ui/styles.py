@@ -43,10 +43,6 @@ footer{
     visibility:hidden;
 }
 
-header{
-    visibility:hidden;
-}
-
 /* -----------------------------
 Sidebar
 ------------------------------*/

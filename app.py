@@ -12,6 +12,7 @@ from repositories.profile_repository import get_profile
 from ui.pages.financial_profile import render_financial_profile
 from ui.sidebar import render_sidebar
 from ui.pages.dashboard import render_dashboard
+from ui.pages.transactions import render_transactions
 
 
 # ---------------------------------------------------------
@@ -76,12 +77,10 @@ if selected_page == "dashboard":
     render_dashboard(user)
 
 elif selected_page == "financial_profile":
-
     render_financial_profile()
 
 elif selected_page == "transactions":
-
-    st.info("Transactions Module Coming Soon.")
+    render_transactions()
 
 elif selected_page == "analytics":
 
