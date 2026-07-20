@@ -48,6 +48,10 @@ if not is_authenticated():
 
 user = get_current_user()
 
+if user is None:
+    render_login_page()
+    st.stop()
+
 profile = get_profile(user["user_id"])
 
 # ---------------------------------------------------------
