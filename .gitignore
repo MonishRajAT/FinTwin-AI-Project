@@ -48,8 +48,8 @@ logs/
 # -----------------------------
 # Machine Learning Models
 # -----------------------------
-models/*.pkl
-models/*.joblib
+ml/models/*.pkl
+ml/models/*.joblib
 
 # -----------------------------
 # ChromaDB Vector Store
