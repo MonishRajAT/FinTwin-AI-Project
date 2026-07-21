@@ -70,8 +70,18 @@ def render_financial_profile():
 
     user = get_current_user()
 
-    if "wizard_step" not in st.session_state:
+    if (
+        "wizard_user_id" not in st.session_state
+        or st.session_state.wizard_user_id != user["user_id"]
+    ):
+        st.session_state.wizard_user_id = user["user_id"]
+
         st.session_state.wizard_step = 1
+
+        st.session_state.pop("monthly_income", None)
+        st.session_state.pop("emergency_fund", None)
+        st.session_state.pop("investments", None)
+        st.session_state.pop("loans", None)
 
     page_header(
         "👤 Financial Digital Twin",
@@ -239,3 +249,13 @@ def render_financial_profile():
             )
 
             st.balloons()
+
+            # Clear wizard state after successful completion
+            st.session_state.pop("wizard_step", None)
+            st.session_state.pop("monthly_income", None)
+            st.session_state.pop("emergency_fund", None)
+            st.session_state.pop("investments", None)
+            st.session_state.pop("loans", None)
+            st.session_state.pop("wizard_user_id", None)
+
+            st.rerun()

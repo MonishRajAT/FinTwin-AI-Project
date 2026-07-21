@@ -35,8 +35,24 @@ def logout():
     Clear authentication session.
     """
     initialize_session()
-    st.session_state[AUTH_KEY] = True
+
+    # Authentication
+    st.session_state[AUTH_KEY] = False
     st.session_state[USER_KEY] = None
+
+    # Clear onboarding state
+    keys_to_remove = [
+        "wizard_step",
+        "monthly_income",
+        "emergency_fund",
+        "investments",
+        "loans",
+        "selected_page",
+        "edit_transaction",
+    ]
+
+    for key in keys_to_remove:
+        st.session_state.pop(key, None)
 
 def is_authenticated() -> bool:
     """

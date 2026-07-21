@@ -13,6 +13,7 @@ from ui.pages.financial_profile import render_financial_profile
 from ui.sidebar import render_sidebar
 from ui.pages.dashboard import render_dashboard
 from ui.pages.transactions import render_transactions
+from ui.pages.analytics import render_analytics
 
 
 # ---------------------------------------------------------
@@ -87,8 +88,7 @@ elif selected_page == "transactions":
     render_transactions()
 
 elif selected_page == "analytics":
-
-    st.info("Analytics Module Coming Soon.")
+    render_analytics()
 
 elif selected_page == "copilot":
 
