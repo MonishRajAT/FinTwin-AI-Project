@@ -134,8 +134,8 @@ FinTwin-AI-Project/
 | Financial Health Engine | ✅ Completed    |
 | Dashboard (v1)          | ✅ Completed    |
 | Transactions Module     | ✅ Completed    |
-| Analytics Dashboard     | 🚧 In Progress  |
-| Machine Learning        | ⏳ Planned      |
+| Analytics Dashboard     | ✅ Completed    |
+| Machine Learning        | 🚧 In Progress  |
 | RAG Pipeline            | ⏳ Planned      |
 | AI Financial Copilot    | ⏳ Planned      |
 | Scenario Simulator      | ⏳ Planned      |
