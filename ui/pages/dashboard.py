@@ -9,6 +9,7 @@ from ui.charts import (
     financial_health_gauge,
     financial_ratios_chart,
 )
+from services.ml_service import MLService
 
 def render_dashboard(user):
     """
@@ -24,6 +25,10 @@ def render_dashboard(user):
 
     profile = dashboard["profile"]
     health = dashboard["health"]
+
+    ml_prediction = MLService.generate_prediction(
+        profile
+    )
 
     page_header(
         "🏠 Dashboard",
@@ -172,6 +177,32 @@ Emergency Fund
         use_container_width=True,
         
     )
+
+    st.write("")
+
+    st.subheader("🧠 AI Financial Twin")
+
+    c1, c2, c3 = st.columns(3)
+
+    with c1:
+        st.metric(
+            "Health Score (ML)",
+            f"{ml_prediction['health_score']:.1f}/100",
+        )
+
+    with c2:
+        st.metric(
+            "Financial Persona",
+            ml_prediction["persona"],
+        )
+
+    with c3:
+        st.metric(
+            "Risk Level",
+            ml_prediction["risk"],
+        )
+
+    st.write("")
 
     # FINANCIAL METRICS
     st.subheader("📊 Financial Metrics")
